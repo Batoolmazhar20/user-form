@@ -1,37 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
-        <h1>user form></h1>
-  <input type="text" id="name" placeholder="Type your name here">
-  <input type="text" id="fname" placeholder="Type your last name here">
-  
-  <input type="number" id="age" placeholder="Type your age here">
-  <input type="email" id="email" placeholder="Type your email here">
-  <input type="text" id="cnic" placeholder="Type your cnic here">
 
-  <button onclick="previewData()">preview</button>
-  <button onclick="submitForm()">Submit</button>
+<div class="container">
+    <h1>User Form</h1>
 
-  <div id="message" class="success"></div>
-    </div>
+    <input type="text" id="name" placeholder="First name">
+    <input type="text" id="fname" placeholder="Last name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="cnic" placeholder="CNIC (13 digits)" maxlength="13">
 
-    <div id="card">
-        <h3>Preview card</h3>
-            <p id="pemail"></p>
-            <p id="pname"></p>
-            <p id="pcnic"></p>
-            <p id="page"></p>
-            
-    </div>
+    <br><br>
 
-    <script src="app.js"></script>
+    <button onclick="limitCNIC()">Check CNIC</button>
+    <button onclick="previewData()">Preview</button>
+    <button onclick="submitForm()">Submit</button>
+
+    <div id="message" class="success"></div>
+</div>
+
+<div id="card">
+    <h3>Preview Card</h3>
+    <p id="pname"></p>
+    <p id="page"></p>
+    <p id="pemail"></p>
+    <p id="pcnic"></p>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
